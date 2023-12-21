@@ -157,12 +157,13 @@ public class Login_Magic_link
 					"/home/bs/Documents/Chromdriver_120/chromedriver-linux64/chromedriver");
 			cap.setCapability("appPackage", "com.impossible_research.sandbox.starboard"); // Starboard package name
 			cap.setCapability("appActivity", "com.impossible_research.sandbox.starboard.ui.splash.view.SplashActivity"); // Starboard login activity
-			// cap.setCapability("app", "/home/bs/Documents/starboard-Android/starboard/apk/Starboard-dev.apk");
+			cap.setCapability("app", "/Users/runner/work/starboard-android/starboard-android/apk/Starboard-dev.apk");
 
 			driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub/"), cap);
 
 			String magic_link = new send_request().sendRequest();
-
+			
+			
 			driver.navigate().to(magic_link);
 			System.out.println(" clicked on magic link");
 
