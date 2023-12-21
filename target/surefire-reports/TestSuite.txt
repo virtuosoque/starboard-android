@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 453.454 s <<< FAILURE! - in TestSuite
+general.Linking_Transactions.Link_Invoice  Time elapsed: 56.274 s  <<< FAILURE!
+java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.xpath: (//*[@resource-id='com.impossible_research.sandbox.starboard:id/category_name']) [1] (tried for 30 second(s) with 500 milliseconds interval)
+	at general.Linking_Transactions.Link_Invoice(Linking_Transactions.java:93)
+
+general.Setting_Yacht.Sync_data  Time elapsed: 32.477 s  <<< FAILURE!
+java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text='0 second ago'] (tried for 20 second(s) with 500 milliseconds interval)
+	at general.Setting_Yacht.Sync_data(Setting_Yacht.java:76)
+
+general.More_Module.Supplier  Time elapsed: 14.449 s  <<< FAILURE!
+java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text='More'] (tried for 10 second(s) with 500 milliseconds interval)
+	at general.More_Module.Supplier(More_Module.java:129)
+
+general.More_Module.Projects  Time elapsed: 12.097 s  <<< FAILURE!
+java.lang.AssertionError: Expected condition failed: waiting for visibility of element located by By.xpath: //android.widget.TextView[@text='More'] (tried for 10 second(s) with 500 milliseconds interval)
+	at general.More_Module.Projects(More_Module.java:517)
+
