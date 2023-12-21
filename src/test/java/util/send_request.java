@@ -31,7 +31,7 @@ public class send_request extends Login_Magic_link {
 			connection.setRequestProperty("Content-Type", "application/json");
 			connection.setRequestProperty("Accept", "application/json");
 			connection.setRequestProperty("x-automation-key", email_token);
-			System.out.println(email_token);
+			System.out.println("Email token : " + email_token);
 
 			String payload = "{\n" + "    \"email\":\"" + obj.getEmail() + "\",\n" + "    \"user_agent\":\"Appium\"\n"
 					+ "}";
@@ -92,7 +92,7 @@ public class send_request extends Login_Magic_link {
 
 					System.out.println("Link -> " + magic_link);
 
-					System.out.println(" clicked on magic link");
+					// System.out.println(" clicked on magic link");
 
 				} catch (Exception e) {
 					System.out.println("Error in getting link");

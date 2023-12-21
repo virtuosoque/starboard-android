@@ -42,6 +42,7 @@ jobs:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
         arch: x86_64
+        ram-size: 6144M
         profile: Nexus 5
         script: |
           # adb install apk/Starboard-dev.apk
