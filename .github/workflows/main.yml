@@ -27,13 +27,13 @@ jobs:
       with:
         node-version: 18.18.2
 
-    # - name: Install and Run Appium Server
-    #   run: |
-    #     npm install -g appium@v1.22
-    #     appium -v
-    #     npm -g install npm
-    #     # appium driver install uiautomator2
-    #     appium > /dev/null &
+    - name: Install and Run Appium Server
+      run: |
+        npm install -g appium@v1.22
+        appium -v
+        npm -g install npm
+        # appium driver install uiautomator2
+        appium > /dev/null &
 
         
     - name: Run Appium Tests
@@ -43,13 +43,13 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         ram-size: 6144M
-        profile: Nexus 6
+        profile: Pixel 6 Pro
         script: |
           # adb install apk/Starboard-dev.apk
           # adb shell pm clear com.google.android.gm
           # adb shell pm clear com.impossible_research.sandbox.starboard
-          avdmanager list device
-          # mvn clean test
+          # avdmanager list device
+          mvn clean test
 
     - name: upload app
       if: always()
