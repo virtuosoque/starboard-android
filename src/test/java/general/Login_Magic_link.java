@@ -169,7 +169,7 @@ public class Login_Magic_link
 
 		}
 
-
+		
 		catch (Exception e2)
 
 		{
