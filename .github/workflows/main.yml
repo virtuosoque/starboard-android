@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        api-level: [33] 
+        api-level: [29] 
         target: [playstore]
     steps:
     - uses: actions/checkout@v4 
@@ -48,7 +48,7 @@ jobs:
           # adb install apk/Starboard-dev.apk
           # adb shell pm clear com.google.android.gm
           # adb shell pm clear com.impossible_research.sandbox.starboard
-          adb devices
+          # adb devices
           mvn clean test
 
     - name: upload app
