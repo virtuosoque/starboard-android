@@ -33,7 +33,7 @@ jobs:
         appium -v
         npm -g install npm
         # appium driver install uiautomator2
-        appium > /dev/null &
+        appium > appium.log 2>&1 &
 
         
     - name: Run Appium Tests
@@ -50,6 +50,15 @@ jobs:
           # adb shell pm clear com.impossible_research.sandbox.starboard
           # adb devices
           mvn clean test
+
+    - name: Upload Appium Logs
+      if: always()
+      uses: actions/upload-artifact@master
+      with:
+        name: appium-logs
+        path: |
+          appium.log
+
 
     - name: upload app
       if: always()
