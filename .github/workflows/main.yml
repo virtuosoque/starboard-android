@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         api-level: [33] 
-        target: [default]
+        target: [playstore]
     steps:
     - uses: actions/checkout@v4 
 
@@ -29,10 +29,10 @@ jobs:
 
     - name: Install and Run Appium Server
       run: |
-        npm install -g appium
+        npm install -g appium@1.22
         appium -v
         npm -g install npm
-        appium driver install uiautomator2
+        # appium driver install uiautomator2
         appium > appium.log 2>&1 &
 
         
