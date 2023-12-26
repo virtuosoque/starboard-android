@@ -49,7 +49,9 @@ jobs:
           # adb shell pm clear com.google.android.gm
           # adb shell pm clear com.impossible_research.sandbox.starboard
           # adb devices
-          mvn clean test
+          sdkmanager --list | grep system-images
+          avdmanager list device
+          # mvn clean test
 
     - name: Upload Appium Logs
       if: always()
