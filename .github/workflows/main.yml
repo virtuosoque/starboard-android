@@ -43,7 +43,7 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         ram-size: 6144M
-        profile: pixel_7_pro
+        profile: pixel_6_pro
         script: |
           # adb install apk/Starboard-dev.apk
           # adb shell pm clear com.google.android.gm
