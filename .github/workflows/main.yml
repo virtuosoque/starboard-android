@@ -37,7 +37,7 @@ jobs:
 
         
     - name: Run Appium Tests
-      uses: reactivecircus/android-emulator-runner@v2 
+      uses: reactivecircus/android-emulator-runner@v2.29.0
       with:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
@@ -50,8 +50,8 @@ jobs:
           # adb shell pm clear com.impossible_research.sandbox.starboard
           # adb devices
           # sdkmanager --list | grep system-images
-          # avdmanager list device
-          mvn clean test
+          avdmanager list device
+          # mvn clean test
 
     - name: Upload Appium Logs
       if: always()
