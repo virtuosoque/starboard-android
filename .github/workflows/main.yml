@@ -43,7 +43,7 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         ram-size: 6144M
-        cores: 6
+        cores: 4
         profile: pixel_6_pro
         script: |
           # adb install apk/Starboard-dev.apk
@@ -54,7 +54,7 @@ jobs:
           avdmanager list device
           mvn clean test
 
-          
+
     - name: Upload Appium Logs
       if: always()
       uses: actions/upload-artifact@master
