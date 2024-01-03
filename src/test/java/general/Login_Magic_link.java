@@ -190,9 +190,21 @@ public class Login_Magic_link
 	public void TearDown() throws Exception
 
 	{
+		Runtime runtime = Runtime.getRuntime();
+        // Total memory in bytes
+        long totalMemory = runtime.totalMemory();
+        // Free memory in bytes
+        long freeMemory = runtime.freeMemory();
+        // Maximum memory that the JVM can use in bytes
+        long maxMemory = runtime.maxMemory();
+        // Print memory information
+        System.out.println("Total Memory: " + totalMemory + " bytes");
+        System.out.println("Free Memory: " + freeMemory + " bytes");
+        System.out.println("Max Memory: " + maxMemory + " bytes");
+        
 		// driver.terminateApp("com.google.android.gm");
 
-		Reporter.log("==========Gmail Application closed==========", true);
+		//Reporter.log("==========Gmail Application closed==========", true);
 
 		// driver.terminateApp("com.impossible_research.sandbox.starboard");
 

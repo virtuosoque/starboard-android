@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         api-level: [33] 
-        target: [google_atd]
+        target: [playstore]
     steps:
     - uses: actions/checkout@v4 
 
@@ -49,9 +49,12 @@ jobs:
           # adb shell pm clear com.google.android.gm
           # adb shell pm clear com.impossible_research.sandbox.starboard
           # adb devices
-          # sdkmanager --list | grep system-images
+          sdkmanager --list | grep system-images
+          vmstat -s
           avdmanager list device
-          # mvn clean test
+          vmstat -s
+          mvn clean test
+          vmstat -s
 
     - name: Upload Appium Logs
       if: always()
