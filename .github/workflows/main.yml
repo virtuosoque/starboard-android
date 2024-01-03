@@ -43,6 +43,7 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         ram-size: 6144M
+        cores: 6
         profile: pixel_6_pro
         script: |
           # adb install apk/Starboard-dev.apk
