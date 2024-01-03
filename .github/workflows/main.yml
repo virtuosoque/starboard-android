@@ -51,11 +51,8 @@ jobs:
           # adb shell pm clear com.impossible_research.sandbox.starboard
           # adb devices
           sdkmanager --list | grep system-images
-          vmstat -s
           avdmanager list device
-          vmstat -s
           mvn clean test
-          vmstat -s
 
     - name: Upload Appium Logs
       if: always()
