@@ -155,7 +155,7 @@ public class Login_Magic_link
 			cap.setCapability("pageLoadStrategy", "none");
 			cap.setCapability("chromedriverExecutable",
 					"/Users/runner/work/starboard-android/starboard-android/chromedriver-linux64/chromedriver");
-			cap.setCapability("app", "/Users/runner/work/starboard-android/starboard-android/apk/Starboard-dev.apk");
+			cap.setCapability("app", "/Users/runner/work/starboard-android/starboard-android/apk/Starboard-develop-dev.apk");
 			cap.setCapability("appPackage", "com.impossible_research.sandbox.starboard"); // Starboard package name
 			cap.setCapability("appActivity", "com.impossible_research.sandbox.starboard.ui.splash.view.SplashActivity"); // Starboard login activity
 
