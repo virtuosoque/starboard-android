@@ -29,6 +29,10 @@ jobs:
 
     - name: Install and Run Appium Server
       run: |
+        # adb uninstall io.appium.settings
+        # adb uninstall io.appium.uiautomator2.server
+        # adb uninstall io.appium.uiautomator2.server.test
+        # adb uninstall io.appium.unlock
         npm install -g appium
         appium -v
         npm -g install npm
