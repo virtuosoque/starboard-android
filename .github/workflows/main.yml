@@ -32,7 +32,7 @@ jobs:
         npm install -g appium@1.22
         appium -v
         npm -g install npm
-        # appium driver install uiautomator2
+        appium driver install uiautomator2
         appium > appium.log 2>&1 &
 
         
