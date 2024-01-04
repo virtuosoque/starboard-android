@@ -54,7 +54,6 @@ jobs:
           avdmanager list device
           mvn clean test
 
-
     - name: Upload Appium Logs
       if: always()
       uses: actions/upload-artifact@master
